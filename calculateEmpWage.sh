@@ -38,6 +38,7 @@ do
 	fi
 
 	workingHour=$(getWorkingHour $isPresent);
+	dailyWage[$day]=$((workingHour*WAGE_PER_HOUR));
 	totalWorkingHour=$((totalWorkingHour+workingHour));
 	((day++));
 done
@@ -47,3 +48,9 @@ totalSalary=$((totalWorkingHour*WAGE_PER_HOUR));
 echo "Employee monthly wage : $"$totalSalary "USD";
 echo "Total working hour : $totalWorkingHour Hr";
 echo "Total working day : $day";
+
+
+for ((i=0;i<${#dailyWage[@]};i++))
+do
+	echo "Day $((i+1)) : $"${dailyWage[i]} "USD";
+done

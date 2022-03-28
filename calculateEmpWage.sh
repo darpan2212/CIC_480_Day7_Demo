@@ -6,6 +6,10 @@ WAGE_PER_HOUR=20;
 MAX_WORKING_DAY=20;
 MAX_WORKING_HOUR=40;
 
+
+
+
+
 function getWorkingHour() {
 	case $1 in
 

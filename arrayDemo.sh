@@ -15,3 +15,7 @@ for ((i=0;i<${#fruits[@]};i++))
 do
 	echo ${fruits[i]}
 done
+
+
+num=(12 32 45 11 56);
+echo ${num[@]};
